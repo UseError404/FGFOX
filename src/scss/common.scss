@@ -1,0 +1,79 @@
+// Заголовки, общие БЄМ блоки и проче...
+* {
+  font-family: '', sans-serif;
+}
+.page {
+  position: relative;
+}
+
+.gradient {
+  background: linear-gradient(180.2deg, #1F1032 36.86%, rgba(31, 16, 50, 0) 99.82%);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+}
+
+.gradient-top {
+  height: 400px;
+
+}
+
+.gradient-bottom {
+  z-index: 2;
+  height: 289px;
+  top: inherit;
+  bottom: 0;
+  background: linear-gradient(180.2deg, #1F1032 36.86%, rgba(31, 16, 50, 0) 99.82%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  transition: all 0.4s ease;
+  @media (max-width: $mobileXSmall) {
+    height: 350px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  min-width: 160px;
+  background: #B0E31B;
+  box-shadow: 0 4px 4px rgba(203, 196, 196, 0.1);
+  border-radius: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 108.84%;
+  text-align: center;
+  color: #383E4B;
+  z-index: 2;
+  border: 2px solid rgba(176, 227, 27, 0);
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &:hover {
+    color: #B0E31B;
+    background: none;
+    border: 2px solid rgba(176, 227, 27, 1);
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 27px;
+
+  ._icon-logo-img,
+  ._icon-logo-vector {
+    &::before {
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+%ic {
+	font-family: "icon";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-euro:before {
+	content: "\e900";
+}
+._icon-procent:before {
+	content: "\e901";
+}
+._icon-50:before {
+	content: "\e902";
+}
+._icon-300:before {
+	content: "\e903";
+}
+._icon-free-spins:before {
+	content: "\e904";
+}
+._icon-logo-img:before {
+	content: "\e905";
+}
+._icon-logo-vector:before {
+	content: "\e906";
+}
+._icon-sign:before {
+	content: "\e907";
+}

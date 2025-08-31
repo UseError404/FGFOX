@@ -1,0 +1,368 @@
+//====================================================================================================
+body {
+  background: url("../img/background.jpg") center / cover repeat-y;
+}
+
+.section-loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/background.jpg") center / cover no-repeat;
+  overflow: hidden;
+  display: flex;
+  z-index: 11;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: 1;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(58, 32, 80, 0) 0%, #3A2050 60%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(58, 32, 80, 0.7);
+    opacity: 0.7;
+    z-index: 1;
+  }
+
+  .inner {
+    z-index: 5;
+    .loading-img {
+      position: relative;
+
+      img {
+        width: 250px;
+        object-fit: cover;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background: rgba(58, 32, 80, 0.7);
+        opacity: 0.7;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        z-index: 1;
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(58, 32, 80, 0) 0%, #3A2050 60%);
+      }
+    }
+
+    .logo {
+      //margin-top: -50%;
+      z-index: 12;
+      position: relative;
+    }
+  }
+}
+
+//====================================================================================================
+.section-promotion {
+  padding: 85px 0 40px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 460px) {
+    padding: 115px 0 40px;
+  }
+
+  .promotion-box {
+    background: rgba(58, 32, 80, 0.7);
+    border: 3px solid #B0E31B;
+    max-width: 480px;
+    border-radius: 30px;
+    padding: 37px 40px 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all 0.4s ease;
+    @media (max-width: 480px) {
+      padding: 25px 25px 32px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      right: -7%;
+      width: 144px;
+      height: 103px;
+      background: url(../img/firefly.png) center / contain no-repeat;
+      transform: rotate(11.2deg);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 96px;
+      height: 56px;
+      background: url(../img/firefly.png) center / contain no-repeat;
+      transform: scaleX(-1);
+    }
+
+    .title {
+      font-family: 'SentencedemoPersonalUse';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 108.84%;
+      text-align: center;
+      text-transform: capitalize;
+      color: #B0E31B;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 17px;
+
+      &::before {
+        position: absolute;
+        right: -15%;
+        top: 19%;
+        font-size: 18px;
+        transition: all 0.4s ease;
+      }
+    }
+
+    .promotion-text {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 108.84%;
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+
+      span {
+        color: #B0E31B;
+      }
+    }
+  }
+}
+
+.section-club {
+  padding: 15px 0;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrap {
+      display: grid;
+      grid-template-columns:repeat( 2, 1fr );
+      grid-template-areas: 'box1 box3' 'box2 box3';
+      gap: 20px 23px;
+      transition: all 0.4s ease;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -4%;
+        right: -16%;
+        width: 64px;
+        height: 48px;
+        background: url(../img/firefly.png) center / contain no-repeat;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -7%;
+        left: -15%;
+        width: 44px;
+        height: 32px;
+        background: url(../img/firefly.png) center / contain no-repeat;
+        transform: scaleX(-1);
+      }
+
+      @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box {
+        min-height: 228px;
+        min-width: 228px;
+        border: 3px solid #B0E31B;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px 6px;
+        overflow: hidden;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 80%;
+          z-index: 1;
+          border-radius: 20px;
+          background: linear-gradient(180deg, rgba(58, 32, 80, 0) 0%, #3A2050 47.19%);
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          background: rgba(58, 32, 80, 0.7);
+          opacity: 0.7;
+          z-index: 1;
+        }
+
+        img {
+          position: absolute;
+          top: 10px;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          z-index: 1;
+        }
+
+        .title {
+          z-index: 2;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 108.84%;
+          text-align: center;
+          text-transform: capitalize;
+          color: #FFFFFF;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .box1 {
+      grid-area: box1;
+    }
+
+    .box2 {
+      grid-area: box2;
+    }
+
+    .box3 {
+      grid-area: box3;
+
+      .title {
+        transition: all 0.4s ease;
+        padding-bottom: 18px;
+        @media (max-width: 480px) {
+          padding-bottom: 0;
+        }
+      }
+
+      .btn {
+        margin-bottom: 40px;
+        @media (max-width: 480px) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.section-support {
+  padding: 23px 0 12px;
+  max-width: 480px;
+  margin: 0 auto;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 24px;
+      transition: all 0.4s ease;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -14%;
+        right: -8%;
+        width: 86px;
+        height: 63px;
+        background: url(../img/firefly.png) center / contain no-repeat;
+        transform: rotate(-37.88deg);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        background: rgba(58, 32, 80, 0.7);
+        border: 3px solid #B0E31B;
+        border-radius: 20px;
+        padding: 23px 6px 29px;
+        @media (max-width: 480px) {
+          max-width: 228px;
+        }
+
+        .support-text {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 108.84%;
+          text-align: center;
+          color: #FFFFFF;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+//====================================================================================================
+.footer {
+  padding: 38px 0 40px;
+  position: relative;
+
+  .gradient {
+    z-index: -1;
+    height: 400px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+
+    .wrap {
+      z-index: 2;
+      position: relative;
+      max-width: 480px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -24%;
+        left: -12%;
+        width: 132px;
+        height: 98px;
+        background: url(../img/firefly.png) center / contain no-repeat;
+        transform: scaleX(-1);
+      }
+
+      .footer-policy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+
+        a {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 800;
+          font-size: 14px;
+          line-height: 110%;
+          text-align: center;
+          text-decoration-line: underline;
+          color: #FFFFFF;
+          padding: 0 5px;
+          cursor: pointer;
+
+          &:not(:last-child) {
+            border-right: 2px solid #fff;
+          }
+        }
+      }
+
+      .copyright {
+        p {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 110%;
+          text-align: center;
+          color: #FFFFFF;
+          margin-bottom: 14px;
+
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+//====================================================================================================
